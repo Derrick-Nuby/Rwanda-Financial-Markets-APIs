@@ -1,8 +1,7 @@
 from datetime import datetime
 from flask_sqlalchemy import SQLAlchemy
 from werkzeug.security import generate_password_hash, check_password_hash
-
-db = SQLAlchemy()
+from .. import db
 
 class User(db.Model):
     __tablename__ = 'users'
@@ -15,7 +14,7 @@ class User(db.Model):
     has_verified_email_address = db.Column(db.Boolean, default=False)
     phone_number = db.Column(db.String(20), unique=True, nullable=True)
     has_verified_phone_number = db.Column(db.Boolean, default=False)
-    password = db.Column(db.String(128), nullable=False)  # Store hashed password
+    password = db.Column(db.String(200), nullable=False)  # Store hashed password
     image_url = db.Column(db.String(255), nullable=True)
     country = db.Column(db.String(50), nullable=True)
     banned = db.Column(db.Boolean, default=False)

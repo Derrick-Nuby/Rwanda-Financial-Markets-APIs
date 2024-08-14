@@ -14,7 +14,8 @@ def init_routes(app):
     
     @app.route("/user/<int:id>", methods=["PUT"])
     def update_user(id: int):
-        return user_controller.update_user(id)
+        data = request.get_json()
+        return user_controller.update_user(id, data)
     
     @app.route("/user/<int:id>", methods=["DELETE"])
     def delete_user(id: int):
@@ -22,7 +23,8 @@ def init_routes(app):
     
     @app.route("/login", methods=["POST"])
     def login_user():
-        return user_controller.login_user()
+        data = request.get_json()
+        return user_controller.login_user(data)
     
     @app.route("/user/all", methods=["GET"])
     def get_all_users():

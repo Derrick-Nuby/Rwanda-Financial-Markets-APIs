@@ -1,4 +1,5 @@
-from flask import jsonify
+from flask import jsonify, make_response
+from app.utils.jwt import encode_auth_token
 from ..models.user import User
 from .. import db
 
@@ -82,12 +83,23 @@ def login_user(data):
 
     user = User.query.filter_by(email=email).first()
 
-    if not user or not check_password_hash(user.password, password):
+    if not user or not user.check_password(password):
         return jsonify({"message": "Invalid email or password"}), 401
 
     token = encode_auth_token(user.id, user.email)
     
-    return jsonify({"message": "Login successful", "token": token}), 200
+    response = make_response(jsonify({"message": "Login successful"}))
+    
+    response.set_cookie(
+        'jwt',
+        value=token,
+        httponly=True,
+        secure=True,
+        samesite='Lax',
+        max_age=60*60*24
+    )
+
+    return response, 200
 
 def get_all_users():
     users = User.query.all()
