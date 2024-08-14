@@ -12,6 +12,7 @@ def create_app():
     
     with app.app_context():
         from .routes.user import init_routes
+        from .routes.rates import init_routes
         init_routes(app)
         db.create_all()
     
