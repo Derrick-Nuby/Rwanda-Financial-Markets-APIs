@@ -6,8 +6,8 @@ class Company(db.Model):
     __tablename__ = 'company'
 
     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
-    company_name = db.Column(db.String(30), nullable=False)
-    ticker_symbol = db.Column(db.String(10), nullable=False)
+    company_name = db.Column(db.String(30), unique=True, nullable=False)
+    ticker_symbol = db.Column(db.String(10), unique=True, nullable=False)
     sector = db.Column(db.String(20), nullable=False)
     country = db.Column(db.String(20), nullable=False)
     market_cap = db.Column(db.Float, nullable=False)

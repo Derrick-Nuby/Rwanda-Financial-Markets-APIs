@@ -3,6 +3,12 @@ from ..models.company import Company
 from .. import db
 
 def create_company(data):
+    required_fields = ['company_name', 'ticker_symbol', 'sector', 'country', 'market_cap', 'date_founded',
+'date_traded' ]
+    
+    for field in required_fields:
+        if field not in data:
+            return jsonify({"message": f"Missing {field}"}), 400
     try:
         company = Company(
             company_name=data['company_name'],
