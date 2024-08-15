@@ -1,0 +1,82 @@
+[
+    {
+        "country": "AED",
+        "code": "AED",
+        "date": "2024-08-14",
+        "buying_value": 357.09273,
+        "average_value": 360.663296,
+        "selling_value": 364.233863
+    },
+    {
+        "country": "AOA",
+        "code": "AOA",
+        "date": "2024-08-14",
+        "buying_value": 1.476844,
+        "average_value": 1.491611,
+        "selling_value": 1.506378
+    },
+    {
+        "country": "AUD",
+        "code": "AUD",
+        "date": "2024-08-14",
+        "buying_value": 868.9905,
+        "average_value": 877.679527,
+        "selling_value": 886.368554
+    },
+    {
+        "country": "BIF",
+        "code": "BIF",
+        "date": "2024-08-14",
+        "buying_value": 0.45512,
+        "average_value": 0.459671,
+        "selling_value": 0.464221
+    },
+    {
+        "country": "BRL",
+        "code": "BRL",
+        "date": "2024-08-14",
+        "buying_value": 240.336108,
+        "average_value": 242.739226,
+        "selling_value": 245.142344
+    },
+    {
+        "country": "CAD",
+        "code": "CAD",
+        "date": "2024-08-14",
+        "buying_value": 956.209577,
+        "average_value": 965.770707,
+        "selling_value": 975.331837
+    },
+    {
+        "country": "CHF",
+        "code": "CHF",
+        "date": "2024-08-14",
+        "buying_value": 1516.519909,
+        "average_value": 1531.683576,
+        "selling_value": 1546.847243
+    },
+    {
+        "country": "CNH",
+        "code": "CNH",
+        "date": "2024-08-14",
+        "buying_value": 183.410049,
+        "average_value": 185.243964,
+        "selling_value": 187.07788
+    },
+    {
+        "country": "CNY",
+        "code": "CNY",
+        "date": "2024-08-14",
+        "buying_value": 183.423821,
+        "average_value": 185.257874,
+        "selling_value": 187.091927
+    },
+    {
+        "country": "DKK",
+        "code": "DKK",
+        "date": "2024-08-14",
+        "buying_value": 193.197095,
+        "average_value": 195.128871,
+        "selling_value": 197.060646
+    }
+]

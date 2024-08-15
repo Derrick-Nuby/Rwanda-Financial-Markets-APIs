@@ -1,0 +1,52 @@
+[
+    {
+        "company": "BLR",
+        "date": "2024-08-15",
+        "price": 195.0
+    },
+    {
+        "company": "IMR",
+        "date": "2024-08-15",
+        "price": 44.0
+    },
+    {
+        "company": "CMR",
+        "date": "2024-08-15",
+        "price": 152.0
+    },
+    {
+        "company": "RHB",
+        "date": "2024-08-15",
+        "price": 526.0
+    },
+    {
+        "company": "NMG",
+        "date": "2024-08-15",
+        "price": 1200.0
+    },
+    {
+        "company": "USL",
+        "date": "2024-08-15",
+        "price": 104.0
+    },
+    {
+        "company": "BOK",
+        "date": "2024-08-15",
+        "price": 305.0
+    },
+    {
+        "company": "KCB",
+        "date": "2024-08-15",
+        "price": 328.0
+    },
+    {
+        "company": "MTNR",
+        "date": "2024-08-15",
+        "price": 170.0
+    },
+    {
+        "company": "EQTY",
+        "date": "2024-08-15",
+        "price": 440.0
+    }
+]
