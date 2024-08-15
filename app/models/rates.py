@@ -8,19 +8,20 @@ class Rates(db.Model):
     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
     country = db.Column(db.String(20), nullable=False)
     code = db.Column(db.String(10), nullable=False)
-    date = db.Column(db.String(20), unique=True, nullable=False)
-    buying_value = db.Column(db.String(30), unique=True, nullable=False)
-    average_value = db.Column(db.String(30), unique=True, nullable=False)
-    selling_value = db.Column(db.String(30), unique=True, nullable=False)
+    date = db.Column(db.Date, nullable=False)
+    buying_value = db.Column(db.Float, nullable=False)
+    average_value = db.Column(db.Float, nullable=False)
+    selling_value = db.Column(db.Float, nullable=False)
     created_at = db.Column(db.DateTime, nullable=False, default=datetime.utcnow)
 
     def __init__(self, country, code, date, buying_value, average_value, selling_value):
         self.country = country
         self.code = code
-        self.date = date
-        self.buying_value = buying_value
-        self.average_value = average_value
-        self.selling_value = selling_value
+        self.date = datetime.strptime(date, '%Y-%m-%d').date()
+        self.buying_value = float(buying_value)
+        self.average_value = float(average_value)
+        self.selling_value = float(selling_value)
+
 
     def __repr__(self):
-        return f'<User {self.date}>'
+        return f'<Rates {self.date}>'
